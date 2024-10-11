@@ -1,0 +1,219 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "9863",
+    "jobId" : "jobs/demo_job",
+    "name" : "demo_job",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "prophecy_internal_jobs",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "BNaZcO41WiPNVIJsQm6Fb$$bRXBd4uNTg23eZkjea0Q8" : {
+      "id" : "BNaZcO41WiPNVIJsQm6Fb$$bRXBd4uNTg23eZkjea0Q8",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "jaffle_shop_classic",
+        "slug" : "jaffle_shop_classic",
+        "x" : -280,
+        "y" : -380
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JPhOaJVpgVkWv9Fv3gDlS$$EDRMOGJ3391HWM3iygeOw",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "Om0EYx-9bMLvTYbmHA9Bo$$bR_QVCD1WwdZe-_GdSSsw",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "entityId" : null,
+        "execSeed" : true,
+        "execRun" : false,
+        "gitEntity" : "branch",
+        "projectId" : "34482",
+        "runOnlyModel" : "false",
+        "loadingModels" : false,
+        "entityName" : null,
+        "gitEntityValueTag" : null,
+        "profile" : "run_profile",
+        "sqlFabricId" : "9863",
+        "gitEntityValue" : null,
+        "execDeps" : false,
+        "gitEntityValueCommit" : null,
+        "gitEntityValueBranch" : null,
+        "execTest" : true,
+        "currentProjectModels" : [ {
+          "label" : "stg_customers",
+          "value" : "stg_customers",
+          "id" : "34482/.prophecy/metadata/sqlmodels/stg_customers",
+          "name" : "stg_customers"
+        }, {
+          "label" : "stg_payments",
+          "value" : "stg_payments",
+          "id" : "34482/.prophecy/metadata/sqlmodels/stg_payments",
+          "name" : "stg_payments"
+        }, {
+          "label" : "customers",
+          "value" : "customers",
+          "id" : "34482/.prophecy/metadata/sqlmodels/customers",
+          "name" : "customers"
+        }, {
+          "label" : "orders",
+          "value" : "orders",
+          "id" : "34482/.prophecy/metadata/sqlmodels/orders",
+          "name" : "orders"
+        }, {
+          "label" : "stg_orders",
+          "value" : "stg_orders",
+          "id" : "34482/.prophecy/metadata/sqlmodels/stg_orders",
+          "name" : "stg_orders"
+        } ]
+      }
+    },
+    "1JM5hJ2oWIO7Jk6VirISe$$pJY742os294OA9XJ-NYQR" : {
+      "id" : "1JM5hJ2oWIO7Jk6VirISe$$pJY742os294OA9XJ-NYQR",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "run_product",
+        "slug" : "run_product",
+        "x" : -420,
+        "y" : -380
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qbuj47oo1wezYyJZAJils$$KdDxSjxQUSAxTrs-jZ3Fo",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "WXXJphMEpjSz1WY_Uc0yg$$JdZ330xDdikQfW8jI5Nex",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "entityId" : null,
+        "execSeed" : true,
+        "execRun" : false,
+        "gitEntity" : "branch",
+        "model" : "34342/.prophecy/metadata/sqlmodels/products",
+        "projectId" : "34342",
+        "runOnlyModel" : "true",
+        "loadingModels" : false,
+        "entityName" : null,
+        "gitEntityValueTag" : null,
+        "profile" : "run_profile",
+        "sqlFabricId" : "9863",
+        "gitEntityValue" : "dev/vlaunir",
+        "execDeps" : false,
+        "gitEntityValueCommit" : null,
+        "gitEntityValueBranch" : "dev/vlaunir",
+        "execTest" : true,
+        "currentProjectModels" : [ {
+          "label" : "stg_supplies",
+          "value" : "stg_supplies",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_supplies",
+          "name" : "stg_supplies"
+        }, {
+          "label" : "stg_products",
+          "value" : "stg_products",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_products",
+          "name" : "stg_products"
+        }, {
+          "label" : "stg_locations",
+          "value" : "stg_locations",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_locations",
+          "name" : "stg_locations"
+        }, {
+          "label" : "metricflow_time_spine",
+          "value" : "metricflow_time_spine",
+          "id" : "34342/.prophecy/metadata/sqlmodels/metricflow_time_spine",
+          "name" : "metricflow_time_spine"
+        }, {
+          "label" : "locations",
+          "value" : "locations",
+          "id" : "34342/.prophecy/metadata/sqlmodels/locations",
+          "name" : "locations"
+        }, {
+          "label" : "stg_customers",
+          "value" : "stg_customers",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_customers",
+          "name" : "stg_customers"
+        }, {
+          "label" : "stg_order_items",
+          "value" : "stg_order_items",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_order_items",
+          "name" : "stg_order_items"
+        }, {
+          "label" : "products",
+          "value" : "products",
+          "id" : "34342/.prophecy/metadata/sqlmodels/products",
+          "name" : "products"
+        }, {
+          "label" : "customers",
+          "value" : "customers",
+          "id" : "34342/.prophecy/metadata/sqlmodels/customers",
+          "name" : "customers"
+        }, {
+          "label" : "orders",
+          "value" : "orders",
+          "id" : "34342/.prophecy/metadata/sqlmodels/orders",
+          "name" : "orders"
+        }, {
+          "label" : "supplies",
+          "value" : "supplies",
+          "id" : "34342/.prophecy/metadata/sqlmodels/supplies",
+          "name" : "supplies"
+        }, {
+          "label" : "order_items",
+          "value" : "order_items",
+          "id" : "34342/.prophecy/metadata/sqlmodels/order_items",
+          "name" : "order_items"
+        }, {
+          "label" : "stg_orders",
+          "value" : "stg_orders",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_orders",
+          "name" : "stg_orders"
+        } ]
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "TiiJdUV_5ZfLB7LDBJXFu$$ZwtRfOJALu_dEuc36eJq7",
+    "source" : "1JM5hJ2oWIO7Jk6VirISe$$pJY742os294OA9XJ-NYQR",
+    "target" : "BNaZcO41WiPNVIJsQm6Fb$$bRXBd4uNTg23eZkjea0Q8",
+    "sourcePort" : "WXXJphMEpjSz1WY_Uc0yg$$JdZ330xDdikQfW8jI5Nex",
+    "targetPort" : "JPhOaJVpgVkWv9Fv3gDlS$$EDRMOGJ3391HWM3iygeOw"
+  } ]
+}

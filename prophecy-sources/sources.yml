@@ -1,0 +1,49 @@
+---
+version: 2
+sources:
+- name: "vlaunir_demos.default"
+  database: "vlaunir_demos"
+  schema: "default"
+  config:
+    enabled: true
+  tables:
+  - name: "raw_payments"
+    description: "Records of payment transactions linked to orders, providing insights\
+      \ into payment methods and transaction amounts."
+    columns:
+    - name: "id"
+      description: "Unique identifier for each payment record"
+      dataType:
+        type: "Bigint"
+    - name: "order_id"
+      description: "The unique identifier for the order associated with the payment"
+      dataType:
+        type: "Bigint"
+    - name: "payment_method"
+      description: "The method used for processing the payment"
+      dataType:
+        type: "String"
+    - name: "amount"
+      description: "Total payment amount for the transaction"
+      dataType:
+        type: "Bigint"
+  - name: "raw_orders"
+    description: "Order records capturing user transactions and statuses, enabling\
+      \ insights into purchasing behavior and trends."
+    columns:
+    - name: "id"
+      description: "Unique identifier for each order"
+      dataType:
+        type: "Bigint"
+    - name: "user_id"
+      description: "The unique ID of the user who placed the order"
+      dataType:
+        type: "Bigint"
+    - name: "order_date"
+      description: "Date when the order was placed"
+      dataType:
+        type: "Date"
+    - name: "status"
+      description: "Current status of the order"
+      dataType:
+        type: "String"

@@ -1,0 +1,901 @@
+{
+  "id" : "stg_payments",
+  "metainfo" : {
+    "label" : "stg_payments",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "orders",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "orders",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "order_id" ],
+            "conditions" : [ {
+              "alias" : "orders",
+              "expression" : {
+                "expression" : "orders.order_id = raw_payments.order_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "orders.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "orders.order_date"
+              },
+              "alias" : "order_date"
+            }, {
+              "expression" : {
+                "expression" : "orders.status"
+              },
+              "alias" : "status"
+            }, {
+              "expression" : {
+                "expression" : "orders.credit_card_amount"
+              },
+              "alias" : "credit_card_amount"
+            }, {
+              "expression" : {
+                "expression" : "orders.coupon_amount"
+              },
+              "alias" : "coupon_amount"
+            }, {
+              "expression" : {
+                "expression" : "orders.bank_transfer_amount"
+              },
+              "alias" : "bank_transfer_amount"
+            }, {
+              "expression" : {
+                "expression" : "orders.gift_card_amount"
+              },
+              "alias" : "gift_card_amount"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "orders",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "order_id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "raw_customers",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "raw_customers",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "raw_customers",
+              "expression" : {
+                "expression" : "raw_customers.id = raw_payments.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "raw_customers.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "raw_customers.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "raw_customers",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "raw_payments",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "raw_payments_1",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "payment_method" ],
+            "conditions" : [ {
+              "alias" : "raw_payments_1",
+              "expression" : {
+                "expression" : "raw_payments_1.payment_method = raw_payments.payment_method"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "raw_payments_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "payment_method" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "stg_payments",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "stg_payments_1",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "order_id", "payment_method" ],
+            "conditions" : [ {
+              "alias" : "stg_payments_1",
+              "expression" : {
+                "expression" : "stg_payments_1.order_id = raw_payments.order_id AND stg_payments_1.payment_method = raw_payments.payment_method"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "stg_payments_1.payment_id"
+              },
+              "alias" : "payment_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "stg_payments_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "order_id", "payment_method" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "test",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "test",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "test",
+              "expression" : {
+                "expression" : "test.id = raw_payments.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "test.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "test",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "raw_orders",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "raw_orders",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "raw_orders",
+              "expression" : {
+                "expression" : "raw_orders.id = raw_payments.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "raw_orders.user_id"
+              },
+              "alias" : "user_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_orders.order_date"
+              },
+              "alias" : "order_date"
+            }, {
+              "expression" : {
+                "expression" : "raw_orders.status"
+              },
+              "alias" : "status"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "raw_orders",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "raw_vendors",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "raw_vendors",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "raw_vendors",
+              "expression" : {
+                "expression" : "raw_vendors.id = raw_payments.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "raw_vendors.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "raw_vendors",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "sales",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "sales",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "order_id" ],
+            "conditions" : [ {
+              "alias" : "sales",
+              "expression" : {
+                "expression" : "sales.ORDER_ID = raw_payments.order_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "sales.CUSTOMER_ID"
+              },
+              "alias" : "CUSTOMER_ID"
+            }, {
+              "expression" : {
+                "expression" : "sales.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "sales.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "sales.FIRST_ORDER"
+              },
+              "alias" : "FIRST_ORDER"
+            }, {
+              "expression" : {
+                "expression" : "sales.MOST_RECENT_ORDER"
+              },
+              "alias" : "MOST_RECENT_ORDER"
+            }, {
+              "expression" : {
+                "expression" : "sales.NUMBER_OF_ORDERS"
+              },
+              "alias" : "NUMBER_OF_ORDERS"
+            }, {
+              "expression" : {
+                "expression" : "sales.CUSTOMER_LIFETIME_VALUE"
+              },
+              "alias" : "CUSTOMER_LIFETIME_VALUE"
+            }, {
+              "expression" : {
+                "expression" : "sales.ORDER_DATE"
+              },
+              "alias" : "ORDER_DATE"
+            }, {
+              "expression" : {
+                "expression" : "sales.STATUS"
+              },
+              "alias" : "STATUS"
+            }, {
+              "expression" : {
+                "expression" : "sales.CREDIT_CARD_AMOUNT"
+              },
+              "alias" : "CREDIT_CARD_AMOUNT"
+            }, {
+              "expression" : {
+                "expression" : "sales.COUPON_AMOUNT"
+              },
+              "alias" : "COUPON_AMOUNT"
+            }, {
+              "expression" : {
+                "expression" : "sales.BANK_TRANSFER_AMOUNT"
+              },
+              "alias" : "BANK_TRANSFER_AMOUNT"
+            }, {
+              "expression" : {
+                "expression" : "sales.GIFT_CARD_AMOUNT"
+              },
+              "alias" : "GIFT_CARD_AMOUNT"
+            }, {
+              "expression" : {
+                "expression" : "sales.AMOUNT"
+              },
+              "alias" : "AMOUNT"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "sales",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "order_id" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "stg_orders",
+            "sourceName" : "vlaunir_demos.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "stg_orders",
+        "canJoinWith" : [ {
+          "processLabel" : "raw_payments",
+          "processId" : "pEHls-WTh9ijigpG_sez-",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "order_id" ],
+            "conditions" : [ {
+              "alias" : "stg_orders",
+              "expression" : {
+                "expression" : "stg_orders.order_total_cents = raw_payments.order_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "stg_orders.location_id"
+              },
+              "alias" : "location_id"
+            }, {
+              "expression" : {
+                "expression" : "stg_orders.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "stg_orders.subtotal_cents"
+              },
+              "alias" : "subtotal_cents"
+            }, {
+              "expression" : {
+                "expression" : "stg_orders.tax_paid_cents"
+              },
+              "alias" : "tax_paid_cents"
+            }, {
+              "expression" : {
+                "expression" : "stg_orders.subtotal"
+              },
+              "alias" : "subtotal"
+            }, {
+              "expression" : {
+                "expression" : "stg_orders.tax_paid"
+              },
+              "alias" : "tax_paid"
+            }, {
+              "expression" : {
+                "expression" : "stg_orders.order_total"
+              },
+              "alias" : "order_total"
+            }, {
+              "expression" : {
+                "expression" : "stg_orders.ordered_at"
+              },
+              "alias" : "ordered_at"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.order_id"
+              },
+              "alias" : "order_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.payment_method"
+              },
+              "alias" : "payment_method"
+            }, {
+              "expression" : {
+                "expression" : "raw_payments.amount"
+              },
+              "alias" : "amount"
+            } ],
+            "headAlias" : "stg_orders",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "order_id" ],
+          "isRecommended" : false
+        } ]
+      } ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "renamed##oujCHweu" : {
+      "id" : "renamed##oujCHweu",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "renamed",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "id"
+          },
+          "alias" : "payment_id"
+        }, {
+          "expression" : {
+            "expression" : "order_id"
+          }
+        }, {
+          "expression" : {
+            "expression" : "payment_method"
+          }
+        }, {
+          "expression" : {
+            "expression" : "-- `amount` is currently stored in cents, so we convert it to dollars\namount / 100"
+          },
+          "alias" : "amount"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vw2bWAwt",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "source"
+        } ],
+        "outputs" : [ {
+          "id" : "GKfQSW4w",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "payment_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "final##TT4bKdGf" : {
+      "id" : "final##TT4bKdGf",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "stg_payments",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM renamed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EfHPttbV",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "payment_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "renamed"
+        } ],
+        "outputs" : [ {
+          "id" : "AjoLhsTw",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "payment_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "pEHls-WTh9ijigpG_sez-" : {
+      "id" : "pEHls-WTh9ijigpG_sez-",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "raw_payments",
+        "slug" : "raw_payments",
+        "x" : 80,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "raw_payments",
+          "sourceType" : "Source",
+          "sourceName" : "vlaunir_demos.default",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SU4MfoRHTEXr3v_QovpAv",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "c8Br0EKd",
+    "source" : "renamed##oujCHweu",
+    "sourcePort" : "GKfQSW4w",
+    "target" : "final##TT4bKdGf",
+    "targetPort" : "EfHPttbV"
+  }, {
+    "id" : "Dwb5SjqxkSSSceL9yJGfj$$6J5Ikh7obwQKLdlZRhERR",
+    "source" : "pEHls-WTh9ijigpG_sez-",
+    "sourcePort" : "SU4MfoRHTEXr3v_QovpAv",
+    "target" : "renamed##oujCHweu",
+    "targetPort" : "vw2bWAwt"
+  } ],
+  "component" : "Model"
+}

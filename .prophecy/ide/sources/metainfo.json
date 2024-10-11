@@ -1,0 +1,1100 @@
+{
+  "name" : "jaffle_shop",
+  "fileSystem" : {
+    "type" : "Folder",
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "providerType" : "databricks",
+  "fabricId" : "9863",
+  "prophecyIDEFolder" : {
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "externalSources" : {
+    "type" : "Project",
+    "name" : "",
+    "children" : [ {
+      "type" : "Catalog",
+      "name" : "bobwelshmer",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "ccf",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "hive_metastore",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "main",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "nyc_taxi",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "omop",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "omop_cdm",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "samples",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "sap",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "system",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "tom",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "vlaunir_demos",
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "default",
+        "tables" : {
+          "orders_helloworld" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "order_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "test" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "raw_customers" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "raw_orders" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "user_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "raw_payments" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "stg_products" : {
+            "entityType" : "VIEW",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "product_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_description",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "is_food_item",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_drink_item",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "stg_customers" : {
+            "entityType" : "VIEW",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "stg_orders" : {
+            "entityType" : "VIEW",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "location_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtotal_cents",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "tax_paid_cents",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_total_cents",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "subtotal",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "tax_paid",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "order_total",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "ordered_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "raw_vendors" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "results" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "home_team",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "away_team",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "home_score",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "away_score",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tournament",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "neutral",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "stg_supplies" : {
+            "entityType" : "VIEW",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "supply_uuid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "supply_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "supply_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "supply_cost",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "is_perishable_supply",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "stg_payments" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "payment_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "sales" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_ORDER",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "MOST_RECENT_ORDER",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "NUMBER_OF_ORDERS",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "CUSTOMER_LIFETIME_VALUE",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CREDIT_CARD_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "COUPON_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "BANK_TRANSFER_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "GIFT_CARD_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "my_target_demo" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "MONTH",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_ORDERS",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "TOTAL_AMOUNT",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "test_delete_me" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "update_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "orders" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "credit_card_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "coupon_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "bank_transfer_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "gift_card_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "shootouts" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "home_team",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "away_team",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "winner",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "first_shooter",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "citibike_stations" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "station_id_int",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "short_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "latitude",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "longitude",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "region_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "rental_methods",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "capacity",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "eightd_has_key_dispenser",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "num_bikes_available",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "num_bikes_disabled",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "num_docks_available",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "num_docks_disabled",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "is_installed",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_renting",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_returning",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "eightd_has_available_keys",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "last_reported",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "customers" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "first_order",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "most_recent_order",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "number_of_orders",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "customer_lifetime_value",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "goalscorers" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "home_team",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "away_team",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "team",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "scorer",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "minute",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "own_goal",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "penalty",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "export_6" : {
+            "entityType" : "TABLE",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "ReportTimestamp",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "BookKey",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ReportDate",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "BusinessDay",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Scenario",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PricingType",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Desk",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Portfolio",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SubPortfolio",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Book",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BU",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Trader",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "GAAP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Instrument",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Family",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOB",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Pair",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "InstrumentType",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Underlier",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "UnderlierType",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Ccy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EpsID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "JPM_Price",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VCG_Price",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Impact",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "stg_order_items" : {
+            "entityType" : "VIEW",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "order_item_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          }
+        }
+      }, {
+        "type" : "Schema",
+        "name" : "default_jaffle_shop",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "default_jaffle_shop_stg",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "dev",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "financial_crimes",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "frw",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "fsi",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "helloworld_bronze",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "helloworld_gold",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "helloworld_silver",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "hls",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "information_schema",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "international_soccer_results",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "jaffle_shop_raw",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "jaffle_shop_stg",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "nyc_citibike_data",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "opencensusdata",
+        "children" : [ ]
+      } ]
+    }, {
+      "type" : "Catalog",
+      "name" : "westpac",
+      "children" : [ ]
+    } ]
+  },
+  "dependenciesContainer" : {
+    "dependencies" : { },
+    "prophecyProjectDependencies" : { }
+  },
+  "entitiesToSync" : [ {
+    "name" : "customers",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "orders",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "stg_customers",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "stg_orders",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "stg_payments",
+    "type" : "Model",
+    "syncedOnce" : true
+  } ],
+  "frontEndLanguage" : "sql"
+}
