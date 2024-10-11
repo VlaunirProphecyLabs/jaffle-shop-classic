@@ -103,7 +103,7 @@
       "metadata" : {
         "label" : "run_product",
         "slug" : "run_product",
-        "x" : -420,
+        "x" : -520,
         "y" : -380
       },
       "ports" : {
@@ -207,6 +207,117 @@
           "name" : "stg_orders"
         } ]
       }
+    },
+    "5WYf59g9N6Si_OVjU6CQ_$$npPW4N0VZ7_EZyf6rT0mv" : {
+      "id" : "5WYf59g9N6Si_OVjU6CQ_$$npPW4N0VZ7_EZyf6rT0mv",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "supplies",
+        "slug" : "supplies",
+        "x" : -520,
+        "y" : -540
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "YThi75d30taHvtlATyEwH$$A1WkMt46Gj9VcHsYXmVb4",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "HPS6oT8_99NuJRLAyUBEs$$mxmQX069rk8mws5oDGr8F",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "entityId" : null,
+        "execSeed" : true,
+        "execRun" : false,
+        "gitEntity" : "branch",
+        "model" : "34342/.prophecy/metadata/sqlmodels/stg_supplies",
+        "projectId" : "34342",
+        "runOnlyModel" : "true",
+        "loadingModels" : false,
+        "entityName" : null,
+        "gitEntityValueTag" : null,
+        "profile" : "run_profile",
+        "sqlFabricId" : "9863",
+        "gitEntityValue" : "dev/vlaunir",
+        "execDeps" : false,
+        "gitEntityValueCommit" : null,
+        "gitEntityValueBranch" : "dev/vlaunir",
+        "execTest" : true,
+        "currentProjectModels" : [ {
+          "label" : "stg_supplies",
+          "value" : "stg_supplies",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_supplies",
+          "name" : "stg_supplies"
+        }, {
+          "label" : "stg_products",
+          "value" : "stg_products",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_products",
+          "name" : "stg_products"
+        }, {
+          "label" : "stg_locations",
+          "value" : "stg_locations",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_locations",
+          "name" : "stg_locations"
+        }, {
+          "label" : "metricflow_time_spine",
+          "value" : "metricflow_time_spine",
+          "id" : "34342/.prophecy/metadata/sqlmodels/metricflow_time_spine",
+          "name" : "metricflow_time_spine"
+        }, {
+          "label" : "locations",
+          "value" : "locations",
+          "id" : "34342/.prophecy/metadata/sqlmodels/locations",
+          "name" : "locations"
+        }, {
+          "label" : "stg_customers",
+          "value" : "stg_customers",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_customers",
+          "name" : "stg_customers"
+        }, {
+          "label" : "stg_order_items",
+          "value" : "stg_order_items",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_order_items",
+          "name" : "stg_order_items"
+        }, {
+          "label" : "products",
+          "value" : "products",
+          "id" : "34342/.prophecy/metadata/sqlmodels/products",
+          "name" : "products"
+        }, {
+          "label" : "customers",
+          "value" : "customers",
+          "id" : "34342/.prophecy/metadata/sqlmodels/customers",
+          "name" : "customers"
+        }, {
+          "label" : "orders",
+          "value" : "orders",
+          "id" : "34342/.prophecy/metadata/sqlmodels/orders",
+          "name" : "orders"
+        }, {
+          "label" : "supplies",
+          "value" : "supplies",
+          "id" : "34342/.prophecy/metadata/sqlmodels/supplies",
+          "name" : "supplies"
+        }, {
+          "label" : "order_items",
+          "value" : "order_items",
+          "id" : "34342/.prophecy/metadata/sqlmodels/order_items",
+          "name" : "order_items"
+        }, {
+          "label" : "stg_orders",
+          "value" : "stg_orders",
+          "id" : "34342/.prophecy/metadata/sqlmodels/stg_orders",
+          "name" : "stg_orders"
+        } ]
+      }
     }
   },
   "connections" : [ {
@@ -214,6 +325,12 @@
     "source" : "1JM5hJ2oWIO7Jk6VirISe$$pJY742os294OA9XJ-NYQR",
     "target" : "BNaZcO41WiPNVIJsQm6Fb$$bRXBd4uNTg23eZkjea0Q8",
     "sourcePort" : "WXXJphMEpjSz1WY_Uc0yg$$JdZ330xDdikQfW8jI5Nex",
+    "targetPort" : "JPhOaJVpgVkWv9Fv3gDlS$$EDRMOGJ3391HWM3iygeOw"
+  }, {
+    "id" : "2aMOyK9oMU52O15nY7B1m",
+    "source" : "5WYf59g9N6Si_OVjU6CQ_$$npPW4N0VZ7_EZyf6rT0mv",
+    "target" : "BNaZcO41WiPNVIJsQm6Fb$$bRXBd4uNTg23eZkjea0Q8",
+    "sourcePort" : "HPS6oT8_99NuJRLAyUBEs$$mxmQX069rk8mws5oDGr8F",
     "targetPort" : "JPhOaJVpgVkWv9Fv3gDlS$$EDRMOGJ3391HWM3iygeOw"
   } ]
 }

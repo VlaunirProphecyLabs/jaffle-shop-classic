@@ -34,6 +34,7 @@ jobs:
     author: vlaunir@prophecy.io
     models:
     - 34342/.prophecy/metadata/sqlmodels/products
+    - 34342/.prophecy/metadata/sqlmodels/stg_supplies
     sqlProjects:
     - '34482'
 gemContainer:
