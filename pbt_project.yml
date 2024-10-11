@@ -1,6 +1,6 @@
 name: jaffle_shop_classic
 description: ''
-version: 0.0.1
+version: '1.0'
 author: vlaunir@prophecy.io
 language: sql
 buildSystem: ''
