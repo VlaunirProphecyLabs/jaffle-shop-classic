@@ -605,60 +605,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "Ci4jlYhG",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "user_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "source"
         } ],
         "outputs" : [ {
           "id" : "tAWKgHgz",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -689,60 +639,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ysj6oxIw",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "renamed"
         } ],
         "outputs" : [ {
           "id" : "xXFHtJRR",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -772,31 +672,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "HkSyTFvpgjUUr6VVEcHoR",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "user_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
