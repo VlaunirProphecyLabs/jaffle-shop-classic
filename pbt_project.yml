@@ -103,19 +103,19 @@ sqlModels:
           type: String
       - name: credit_card_amount
         dataType:
-          type: Float
+          type: Double
       - name: coupon_amount
         dataType:
-          type: Float
+          type: Double
       - name: bank_transfer_amount
         dataType:
-          type: Float
+          type: Double
       - name: gift_card_amount
         dataType:
-          type: Float
+          type: Double
       - name: amount
         dataType:
-          type: Float
+          type: Double
     description: This table has basic information about orders, as well as some derived
       facts based on payments
     author: vlaunir@prophecy.io
@@ -156,7 +156,7 @@ sqlModels:
           type: Bigint
       - name: customer_lifetime_value
         dataType:
-          type: Float
+          type: Double
     description: This table has basic information about a customer, as well as some
       derived facts based on a customer's orders
     author: vlaunir@prophecy.io
@@ -188,7 +188,7 @@ sqlModels:
           type: String
       - name: amount
         dataType:
-          type: Float
+          type: Double
     description: null
     author: vlaunir@prophecy.io
     files:
